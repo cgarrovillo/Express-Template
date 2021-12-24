@@ -3,7 +3,7 @@ import express = require('express')
 const app = express()
 const router = express.Router()
 
-router.get('/ping', (ctx) => (ctx.body = 'pong'))
+router.get('/ping', (req, res) => res.send('pong'))
 
 app.use(router)
 
